@@ -9,8 +9,7 @@ from gtts import gTTS
 # OpenAI API Key
 #openai.api_key = "your_openai_api_key"
 client = OpenAI(
-    #api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
-    api_key=""
+    api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
 )
 
 # Directory for storing temporary images
