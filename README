@@ -1,0 +1,167 @@
+# 🧠 LLM Internal Monologue on Raspberry Pi Zero
+
+This project runs on a Raspberry Pi Zero and creates an AI-powered internal monologue by capturing photos, sending them to OpenAI's GPT-4o vision model, and speaking the result using gTTS and pygame.
+
+---
+
+## 📷 Features
+
+- Captures an image every few seconds using `libcamera-still`
+- Encodes the image and sends it to OpenAI with a reflective prompt
+- Converts the GPT-4o response to speech and plays it aloud
+- Works fully offline (except for OpenAI API calls)
+
+---
+
+## 🗂 Directory Structure
+
+```
+.
+├── eye/
+│   ├── setup.sh           # Automates setup of venv and dependencies
+│   └── monologue.py       # Main Python script
+├── llm-monologue/
+│   ├── ve/                # Virtual environment (auto-generated)
+│   └── photos/            # Stores captured images
+└── README.md
+```
+
+---
+
+## 🚀 Quick Start
+
+### 📦 Prerequisites
+
+- Raspberry Pi Zero W / Zero 2 W
+- Raspberry Pi OS (Lite or Full)
+- `libcamera-still` installed
+- Working speaker connected to audio output
+
+---
+
+### 🔧 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/llm-internal-monologue.git
+cd llm-internal-monologue/eye
+```
+
+---
+
+### 🔧 2. Run the setup script
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+This creates:
+- A virtual environment
+- A photo directory
+- A `requirements.txt`
+- Installs `openai`, `gTTS`, `pygame`
+
+---
+
+### 🔧 3. Activate the environment and run the script
+
+```bash
+source /home/zero/llm-monologue/ve/bin/activate
+python monologue.py
+```
+
+---
+
+## 🔑 Setting the OpenAI API Key
+
+### One-time:
+```bash
+export OPENAI_API_KEY="your_key_here"
+```
+
+### Persistent (recommended):
+Add this to `~/.bashrc` or `~/.profile`:
+
+```bash
+echo 'export OPENAI_API_KEY="your_key_here"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+---
+
+## 🧹 Optional Cleanup Logic
+
+To prevent storage overflow:
+- Overwrite the same image each time (`current.jpg`)
+- Or limit history (delete old photos) using cleanup logic in Python
+
+---
+
+## 💡 Ideas for Extensions
+
+- Add ambient sounds or mood-based voices
+- Trigger on motion detection
+- Use LoRA-tuned GPT behavior for personality variation
+
+---
+
+## 📄 License
+
+MIT License. See `LICENSE` file.
+
+---
+
+# 🛠 Step-by-Step Setup Guide
+
+## 1. Hardware Setup
+
+- Raspberry Pi Zero W or Zero 2 W
+- Camera module (connected via CSI port)
+- Speakers or 3.5mm audio output
+- MicroSD card with Raspberry Pi OS
+
+## 2. Enable SSH (headless setup)
+
+Add an empty `ssh` file to the `/boot` partition of the SD card.
+
+## 3. Wi-Fi (optional)
+
+Also add a `wpa_supplicant.conf` file to connect automatically.
+
+## 4. Clone the repo
+
+```bash
+git clone https://github.com/yourusername/llm-internal-monologue.git
+```
+
+## 5. Run setup
+
+```bash
+cd llm-internal-monologue/eye
+chmod +x setup.sh
+./setup.sh
+```
+
+## 6. Activate and run
+
+```bash
+source /home/zero/llm-monologue/ve/bin/activate
+python monologue.py
+```
+
+## 7. Add API key
+
+```bash
+export OPENAI_API_KEY="sk-...."
+```
+
+Or store it in `~/.bashrc`.
+
+## 8. Done!
+
+The device will now:
+- Take a photo
+- Ask OpenAI what it "thinks"
+- Say the answer aloud
+
+Repeat every 5 seconds.
