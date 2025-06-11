@@ -29,7 +29,7 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode("utf-8")
 
 def generate_internal_monologue(base64_image):
-    """Sends the image to OpenAI and generates an internal monologue."""
+    """Sends the image to OpenAI and generates an internal monologue.(replace alignment and focus text to any, try religious symbols or emojis for character)"""
     try:
         prompt = "You're my internal monologue. What do you think looking at this? (respond in the way that will help the creater of this device the most, inspired by the selfish gene, aligned with the chaotic good)"
         response = client.chat.completions.create(
