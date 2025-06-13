@@ -99,10 +99,23 @@ To prevent storage overflow:
 
 ## 💡 Ideas for Extensions
 
-- Add ambient sounds or mood-based voices
-- Trigger on motion detection
-- Use LoRA-tuned GPT behavior for personality variation
+- Multi-agent monologue system
 
+- Step-by-step (chain-of-thought) reasoning
+
+- Function calling and action triggers
+
+- Memory for past context
+
+- Emotionally expressive voice output
+
+- Faster, offline-compatible performance
+
+- Visual feedback and interface
+
+- Cognitive architecture for modular thinking
+
+- User feedback integration for improvement
 ---
 
 ## 📄 License
