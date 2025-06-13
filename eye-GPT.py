@@ -87,9 +87,6 @@ def main():
             # Speak the generated monologue
             speak_text(monologue)
 
-            # Wait before next capture (e.g., 5 seconds)
-            time.sleep(5)
-
     except KeyboardInterrupt:
         print("Exiting program.")
 
