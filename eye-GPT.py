@@ -20,7 +20,7 @@ os.makedirs(image_dir, exist_ok=True)
 #Age made
 def capture_image(image_path):
     """Captures an image using libcamera and saves it to the specified path."""
-#Technoblade was here (selfish)
+#Technoblade never dies (selfish)
     try:
         subprocess.run(["libcamera-still", "-o", image_path, "-t", "1"], check=True)
     except subprocess.CalledProcessError as e:
