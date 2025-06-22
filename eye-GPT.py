@@ -20,7 +20,7 @@ def capture_image(image_path):
     """Captures an image using libcamera and saves it to the specified path."""
     try:
         subprocess.run(["libcamera-still", "-o", image_path, "-t", "1"], check=True)
-#Techoblade was here
+#Techoblade was here (selfish)
     except subprocess.CalledProcessError as e:
         print(f"Error capturing image: {e}")
 
