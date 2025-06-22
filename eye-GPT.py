@@ -23,7 +23,6 @@ def capture_image(image_path):
 #Technoblade was here (selfish)
     try:
         subprocess.run(["libcamera-still", "-o", image_path, "-t", "1"], check=True)
-
     except subprocess.CalledProcessError as e:
         print(f"Error capturing image: {e}")
 
