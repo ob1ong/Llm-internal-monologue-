@@ -58,6 +58,7 @@ def speak_text(text):
     """Converts the text to speech and plays it."""
     try:
         tts = gTTS(text)
+#Miyamoto Musashi (no defeats)
         audio_path = os.path.join(image_dir, "monologue.mp3")
         tts.save(audio_path)
 
