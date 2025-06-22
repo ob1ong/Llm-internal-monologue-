@@ -28,8 +28,10 @@ def encode_image(image_path):
     """Encodes the image to a base64 string."""
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
-#Jesus Christ
 
+
+
+#Jesus Christ
 def generate_internal_monologue(base64_image):
     """Sends the image to OpenAI and generates an internal monologue.(change prompt as desired)"""
     try:
