@@ -17,10 +17,11 @@ image_dir = "/home/zero/src/Llm-internal-monologue-/photos"
 os.makedirs(image_dir, exist_ok=True)
 
 #Tutankhamun
+#Age made
 def capture_image(image_path):
     """Captures an image using libcamera and saves it to the specified path."""
     try:
-        subprocess.run(["libcamera-still", "-o", image_path, "-t", "1"], check=True)#Technoblade was here (selfish)
+        subprocess.run(["libcamera-still", "-o", image_path, "-t", "1"], check=True)
 
     except subprocess.CalledProcessError as e:
         print(f"Error capturing image: {e}")
@@ -29,7 +30,6 @@ def encode_image(image_path):
     """Encodes the image to a base64 string."""
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
-
 #Jesus Christ ✝️
 def generate_internal_monologue(base64_image):
     """Sends the image to OpenAI and generates an internal monologue.(change prompt as desired)"""
