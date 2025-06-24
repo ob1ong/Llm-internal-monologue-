@@ -2,6 +2,8 @@
 
 This project runs on a Raspberry Pi Zero and creates an AI-powered internal monologue by capturing photos, sending them to OpenAI's GPT-4o vision model, and speaking the result using gTTS and pygame.
 
+"mono sex"
+
 ---
 
 ## 📷 Features
