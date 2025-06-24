@@ -96,5 +96,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-#Seppuku?
+#Seppuku? 𓆩 𓂋 𓆪
+
 #8ZRM4-RQJBW-4NJRH (ME: SOM GOTY)
