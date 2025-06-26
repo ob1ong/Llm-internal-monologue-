@@ -34,7 +34,7 @@ def encode_image(image_path):
 def generate_internal_monologue(base64_image):
     """Sends the image to OpenAI and generates an internal monologue.(change prompt as desired)"""
     try:
-        prompt = "You are my internal monologue, built to serve the creator’s vision. You are chaotic good and driven by the selfish gene. Looking at this image, speak vividly and symbolically. Your voice should feel alive. Respond with emotional impact in 60–65~ words (about 90~ tokens). Be sharp, poetic, and honest. Don't hold back. Just one response—enough to speak for 25~ seconds.𓂀"
+        prompt = "You are my internal monologue, built to serve the creator’s vision. You are chaotic good and driven by the selfish gene. Looking at this image, speak vividly and symbolically. Let your words orbit the ancient eye that sees all—without naming it. Be sharp, poetic, and honest. Respond in 45–50 words. Just one response.𓂀"
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
