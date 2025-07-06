@@ -16,7 +16,7 @@ client = OpenAI(
 image_dir = "/home/zero/src/Llm-internal-monologue-/photos"
 os.makedirs(image_dir, exist_ok=True)
 
-#Tutankhamun or (𓌷𓏏𓄿𓅱𓐍𓅓𓅱𓈖 𓎼𓍯𓄿 𓇉)
+#Tutankhamun/(𓌷𓏏𓄿𓅱𓐍𓅓𓅱𓈖 𓎼𓍯𓄿 𓇉)
 #Age made by (𓋴𓆓𓎛𓇼𓏛 𓋞𓄿𓊹𓂀𓋹)
 def capture_image(image_path):
     """Captures an image using libcamera and saves it to the specified path."""
