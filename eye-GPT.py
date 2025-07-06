@@ -17,7 +17,7 @@ image_dir = "/home/zero/src/Llm-internal-monologue-/photos"
 os.makedirs(image_dir, exist_ok=True)
 
 #Tutankhamun
-#Age made (𓋴𓆓𓎛	𓇼𓄿𓂀𓋹)
+#Age made (𓋴𓆓𓎛𓇼𓄿𓂀𓋹)
 def capture_image(image_path):
     """Captures an image using libcamera and saves it to the specified path."""
 #Technoblade never dies (selfish)
