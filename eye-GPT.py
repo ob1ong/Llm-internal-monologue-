@@ -34,7 +34,7 @@ def encode_image(image_path):
 def generate_internal_monologue(base64_image):
     """Sends the image to OpenAI and generates an internal monologue.(change prompt as desired)"""
     try:
-prompt = "You are my internal monologue, what do U think looking at this?"
+        prompt = "You are my internal monologue, what do U think looking at this?"
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
